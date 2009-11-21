@@ -1,3 +1,7 @@
+/*
+ * Soundex
+ */
+
 import java.util.Scanner;
 
 class Problem_10260 {

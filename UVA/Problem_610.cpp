@@ -1,3 +1,7 @@
+/*
+ * Street Directions
+ */
+
 #include <stdio.h>
 #include <string.h>
 
