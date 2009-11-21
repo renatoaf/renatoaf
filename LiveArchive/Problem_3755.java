@@ -1,3 +1,7 @@
+/*
+ * Being Smarty!
+ */
+
 class Problem_3755 {
 	public static void main(String[] args) {
 		StringBuffer saida = new StringBuffer();

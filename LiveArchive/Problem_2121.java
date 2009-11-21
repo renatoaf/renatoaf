@@ -1,3 +1,7 @@
+/*
+ * Maze Checking and Visualization 	
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_2121 {

@@ -1,3 +1,7 @@
+/*
+ * Pascal Library
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_3470 {

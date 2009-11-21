@@ -1,3 +1,7 @@
+/*
+ * Galou is Back!
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_4217 {
@@ -76,8 +80,8 @@ class Problem_4217 {
 
 			if (podeVisitar(x, y, estados, lin, col)) {
 				if (estados[i][j] == estados[x][y]) {
-					// Uma engrenagem está bloqueada quando ela
-					// está tentando girar em ambos sentidos ao mesmo tempo.
+					// Uma engrenagem estï¿½ bloqueada quando ela
+					// estï¿½ tentando girar em ambos sentidos ao mesmo tempo.
 					floodBloqueando(i, j, estados, lin, col);
 					return true;
 
@@ -119,11 +123,11 @@ class Problem_4217 {
 				motor[i] = readln().toCharArray();
 				for (int j = 0; j < colunas; j++) {
 					if (motor[i][j] == MOVE) {
-						// São inicialmente ativadas e tentam giram em sentido
-						// horário
+						// Sï¿½o inicialmente ativadas e tentam giram em sentido
+						// horï¿½rio
 						estados[i][j] = HORARIO;
 					} else if (motor[i][j] == N_MOVE) {
-						// Uma engrenagem está livre quando ela não é ativada
+						// Uma engrenagem estï¿½ livre quando ela nï¿½o ï¿½ ativada
 						estados[i][j] = LIVRE;
 					} else {
 						estados[i][j] = N_TEM;

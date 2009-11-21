@@ -1,3 +1,7 @@
+/*
+ * Power Generation
+ */
+
 #include <iostream>
 #include <vector>
 

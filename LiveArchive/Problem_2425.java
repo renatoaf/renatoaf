@@ -1,3 +1,7 @@
+/*
+ * Mice and Maze
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_2425 {

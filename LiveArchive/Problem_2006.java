@@ -1,3 +1,7 @@
+/*
+ * Most wanted word
+ */
+
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Hashtable;
