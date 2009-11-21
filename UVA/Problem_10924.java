@@ -1,3 +1,7 @@
+/*
+ * Prime Words
+ */
+
 import java.util.Scanner;
 
 class Problem_10924 {
