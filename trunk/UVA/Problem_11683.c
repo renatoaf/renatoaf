@@ -1,3 +1,7 @@
+/*
+ * Laser Sculpture
+ */
+
 #include <stdio.h>
 
 int main() {

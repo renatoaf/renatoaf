@@ -1,3 +1,7 @@
+/*
+ * Is this the easiest problem
+ */
+
 import java.util.Scanner;
 
 class Problem_11479 {

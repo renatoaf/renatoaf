@@ -1,3 +1,7 @@
+/*
+ * High School Physics
+ */
+
 import java.util.Scanner;
 
 class Problem_10071 {

@@ -1,3 +1,7 @@
+/*
+ * Jolly Jumpers
+ */
+
 import java.util.Scanner;
 
 class Problem_10038 {
