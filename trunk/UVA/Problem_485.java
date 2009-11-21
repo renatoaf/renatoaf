@@ -1,3 +1,7 @@
+/*
+ * Pascal's Triangle of Death
+ */
+
 import java.math.BigInteger;
 
 class Problem_485 {
