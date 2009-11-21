@@ -1,3 +1,7 @@
+/*
+ * Ugly Numbers
+ */
+
 class Problem_136 {
 	static boolean isUglyNumber(int n) {
 		if (n == 1) {

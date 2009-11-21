@@ -1,3 +1,7 @@
+/*
+ * World Scramble
+ */
+
 import java.util.Scanner;
 
 class Problem_483 {
