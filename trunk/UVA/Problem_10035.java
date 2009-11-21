@@ -1,3 +1,7 @@
+/*
+ * Primary Arithmetic
+ */
+
 import java.util.Scanner;
 
 class Problem_10035 {
