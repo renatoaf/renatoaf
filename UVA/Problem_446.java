@@ -1,3 +1,7 @@
+/*
+ * Kibbles n Bits n Bits n Bits
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

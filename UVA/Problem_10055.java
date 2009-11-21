@@ -1,3 +1,7 @@
+/*
+ * Hashmat the Brave Warrior
+ */
+
 import java.util.Scanner;
 
 class Problem_10055 {
