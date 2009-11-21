@@ -1,3 +1,7 @@
+/*
+ * Ternary
+ */
+
 import java.util.Scanner;
 
 class Problem_11185 {

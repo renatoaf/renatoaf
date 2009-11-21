@@ -1,3 +1,7 @@
+/*
+ * The Department of Redundancy
+ */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;

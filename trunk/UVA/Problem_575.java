@@ -1,3 +1,7 @@
+/*
+ * Skew Binary
+ */
+
 import java.util.Scanner;
 
 class Problem_575 {
