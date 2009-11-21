@@ -1,9 +1,13 @@
+/*
+ * The Huge One
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
 
-class Problem_11448 {
+class Problem_11344 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder saida = new StringBuilder();
@@ -11,10 +15,21 @@ class Problem_11448 {
 
 		int casos = Integer.parseInt(in.readLine());
 		for (int c = 1; c <= casos; c++) {
-			String[] config = in.readLine().split("\\s+");
-			BigInteger A = new BigInteger(config[0]);
-			BigInteger B = new BigInteger(config[1]);
-			saida.append(A.subtract(B) + separador);
+			BigInteger M = new BigInteger(in.readLine());
+			String[] S = in.readLine().split("\\s+");
+
+			boolean wonderful = true;
+
+			for (int i = 1; i < S.length; i++) {
+				if (!M.mod(new BigInteger(S[i])).equals(BigInteger.ZERO)) {
+					wonderful = false;
+					break;
+				}
+			}
+
+			saida.append(M + " - ");
+			saida.append(wonderful ? "Wonderful." : "Simple.");
+			saida.append(separador);
 		}
 
 		System.out.print(saida);

@@ -1,3 +1,7 @@
+/*
+ * Trust Groups
+ */
+
 #include <stdio.h>
 #include <map>
 #include <string.h>
