@@ -1,3 +1,7 @@
+/*
+ * Shrinking Polygons
+ */
+
 #include <stdio.h>
 
 int temPonto[10000000];

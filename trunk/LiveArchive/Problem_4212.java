@@ -1,3 +1,7 @@
+/*
+ * Candy
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_4212 {

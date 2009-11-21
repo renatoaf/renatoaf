@@ -1,3 +1,7 @@
+/*
+ * Walk Like an Egyptian
+ */
+
 class Problem_3758 {
 	static String readln() {
 		String newLine = System.getProperty("line.separator");

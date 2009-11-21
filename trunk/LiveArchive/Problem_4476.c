@@ -1,3 +1,7 @@
+/**
+ * Electric Bill
+ */
+
 #include <stdio.h>
 
 long long min(long long a, long long b) {

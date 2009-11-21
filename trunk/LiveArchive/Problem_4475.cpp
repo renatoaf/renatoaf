@@ -1,3 +1,7 @@
+/*
+ * Dinner Hall
+ */
+
 #include <stdio.h>
 #include <vector>
 #include <algorithm>

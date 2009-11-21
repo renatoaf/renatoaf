@@ -1,3 +1,7 @@
+/*
+ * Electricity
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_4214 {

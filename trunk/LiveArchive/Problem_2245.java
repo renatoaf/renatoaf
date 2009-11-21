@@ -1,3 +1,7 @@
+/*
+ * Octal Fractions
+ */
+
 class Problem_2245 {
 	static String readln() {
 		String newLine = System.getProperty("line.separator");

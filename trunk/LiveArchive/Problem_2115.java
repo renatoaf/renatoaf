@@ -1,3 +1,7 @@
+/*
+ * An Inductively-Defined Function
+ */
+
 import java.util.StringTokenizer;
 
 class Problem_2115 {

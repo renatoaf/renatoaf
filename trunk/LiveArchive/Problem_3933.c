@@ -1,3 +1,7 @@
+/*
+ * Galou is Back!
+ */
+
 #include <stdio.h>
 
 char MOVE = 'I';
@@ -65,8 +69,8 @@ int flood(int i, int j, int lin, int col) {
 
 		if (podeVisitar(x, y, lin, col)) {
 			if (estados[i][j] == estados[x][y]) {
-				// Uma engrenagem está bloqueada quando ela
-				// está tentando girar em ambos sentidos ao mesmo tempo.
+				// Uma engrenagem estï¿½ bloqueada quando ela
+				// estï¿½ tentando girar em ambos sentidos ao mesmo tempo.
 				floodBloqueando(i, j, lin, col);
 				return 1;
 
@@ -105,11 +109,11 @@ int main() {
 			for (j = 0; j < colunas; j++) {
 				motor[i][j] = linha[j];
 				if (motor[i][j] == MOVE) {
-					// São inicialmente ativadas e tentam giram em sentido
-					// horário
+					// Sï¿½o inicialmente ativadas e tentam giram em sentido
+					// horï¿½rio
 					estados[i][j] = HORARIO;
 				} else if (motor[i][j] == N_MOVE) {
-					// Uma engrenagem está livre quando ela não é ativada
+					// Uma engrenagem estï¿½ livre quando ela nï¿½o ï¿½ ativada
 					estados[i][j] = LIVRE;
 				} else {
 					estados[i][j] = N_TEM;
