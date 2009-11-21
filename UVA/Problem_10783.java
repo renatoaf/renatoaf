@@ -1,3 +1,7 @@
+/*
+ * Odd Sum
+ */
+
 import java.util.Scanner;
 
 class Problem_10783 {
