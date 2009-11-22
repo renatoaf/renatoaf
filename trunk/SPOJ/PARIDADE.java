@@ -1,10 +1,6 @@
-/*
- * Parity
- */
-
 import java.util.Scanner;
 
-class Problem_10931 {
+class PARIDADE {
 	static String representacao;
 	static int paridade;
 
@@ -27,8 +23,8 @@ class Problem_10931 {
 		int i;
 		while ((i = scan.nextInt()) != 0) {
 			calculaParidade(i);
-			System.out.println("The parity of " + representacao
-					+ " is " + paridade + " (mod 2).");
+			System.out.println("The parity of " + representacao + " is "
+					+ paridade + " (mod 2).");
 		}
 	}
 }
