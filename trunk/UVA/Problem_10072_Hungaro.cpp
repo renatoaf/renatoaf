@@ -223,17 +223,14 @@ int main() {
 		printf("Team #%d", caso++);
 		printf("\nMaximum Effective Score = %d", MAXIMO_SCORE);
 		printf("\nBatsmen :");
-		for (int i = 0; i < BT; i++) {
+		for (int i = 0; i < BT; i++)
 			printf(" %d", batsmen[i]);
-		}
 		printf("\nBowlers :");
-		for (int i = 0; i < BL; i++) {
+		for (int i = 0; i < BL; i++)
 			printf(" %d", bowlers[i]);
-		}
 		printf("\nAll-rounders :");
-		for (int i = 0; i < AR; i++) {
+		for (int i = 0; i < AR; i++)
 			printf(" %d", all_rounders[i]);
-		}
 		printf("\n");
 	}
 
