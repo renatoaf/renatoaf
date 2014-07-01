@@ -5,12 +5,10 @@
 
 = Introduction =
 
-This guide assumes that you're using Windows. 
-
-= Install Java6 and Java7 =
+= Download and Install Java6 and Java7 =
 Sigmah is a Java project. This project is using the GWT tools which only supports (for now) java 6. In order to build and run the project, we will need to install Java 6. However, we will also need to install Java 7 because this version of the java edition is required to run some component we will install later.
 
-== Download Java SE ==
+== Windows ==
 To download this version, go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html Java SE Development Kit 7u51] and get the latest available Java SE Development Kit 7.
 Then run the install program. You should keep the default settings. It will install the JDK, and the JRE
 
@@ -21,7 +19,24 @@ To install Java 6 we have to do the same operations. The latest version is avail
 
 *Warning:* to download early version of Java, you may have to create an Oracle account.
 
+== Linux ==
+If you are using a Linux based system, you may just install JDK 6 via command line:
+
+{{{
+sudo apt-get install openjdk-6-jdk
+}}}
+
+To find in which folder your JDK was installed, use:
+
+{{{
+echo $JAVA_HOME
+}}}
+
+On Ubuntu 13.10, for example, the JDK installation folder is _/usr/lib/jvm/_.
+
 = Eclipse installation =
+The procedure to install Eclipse is the same for both Linux and Windows systems.
+
 == Download eclipse ==
 Eclipse is available on the [http://www.eclipse.org/downloads/ Eclipse download page]
 For this tutorial, we will use the latest eclipse version this date, which is “Eclipse Kepler 4.3.2”. After having downloading the zip file, just unzip it into the repository you want.
@@ -46,7 +61,7 @@ Select Standard VM, and browse to the java 6 directory. Eclipse should then find
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/05_add_JRE.png" />
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/06_add_JRE.png" />
 
-Now close the Preferences window, and re-open it. Open Open Java > Installed JREs > Execution Envronment. Check the JREs corresponding to the Execution Envirronment for Java SE-1.6 and Java SE-1.7.
+Now close the Preferences window, and re-open it. Open Java > Installed JREs > Execution Envronment. Check the JREs corresponding to the Execution Envirronment for Java SE-1.6 and Java SE-1.7.
 
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/07_add_JRE.png" />
 
@@ -73,7 +88,7 @@ Click Install > Select all > confirm > accept agreements > finish
 
 You may restart Eclipse before continuing.
 
-=== Gwt plugin ===
+=== GWT plugin ===
 Sigmah project is a full GWT app. This plugin integrates the “Google Web Toolkit” tools into Eclipse. Get the “Google plugin for Eclipse 4.3” or newer. You must have the jdk 1.7 installed to be able to run this plugin, but keep in mind that the Sigmah project is built under java 1.6.
 
 <img border="1" height="400px" src="http://sigma-h.googlecode.com/svn/wiki/install/11_install_gwt.png" />
@@ -107,13 +122,23 @@ Now we will convert this project to a “Maven project”. Right click on it, Co
 <img border="1" height="400px" src="http://sigma-h.googlecode.com/svn/wiki/install/19_Convert_to_maven.png" />
 <img border="1" src="http://sigma-h.googlecode.com/svn/wiki/install/20_Convert_to_maven.png" />
 
-== Add missing libraries ==
+= Add missing libraries =
 ==== Important temporary note: ====
 Currently, the maven build will not work due to missing library on the Maven repository. We're fixing this by setting up a new Maven repository elsewhere. In the meantime, the solution is to download and install those libraries manually.
 
-=== Get Apache maven ===
+== Get Apache maven ==
+
+=== Windows ===
 First you will need to get the “real” Apache Maven. Go to the [http://maven.apache.org/download.cgi Apache download page] and get the last version (3.2.1) and unzip it anywhere on your computer.
 
+=== Linux ===
+To install Maven on Unix based-systems, you may use apt-get:
+
+{{{
+sudo apt-get install maven
+}}}
+
+== Installing libraries ==
 Now we will use this Maven to get the missing libraries.
 The jar libraries can be downloaded from this [http://code.google.com/p/sigma-h/downloads/detail?name=missing-jar-to-build-Sigmah.zip location]. Then unzip the archive.
 
@@ -123,11 +148,12 @@ mvn install:install-file -Dfile=..\..\missing-jar-to-build-Sigmah\gwt-maps-1.1.1
 mvn install:install-file -Dfile=..\..\missing-jar-to-build-Sigmah\gxt-2.2.5-gwt22.jar -DgroupId=com.extjs -DartifactId=gxt -Dversion=2.2.5-gwt22 -Dpackaging=jar
 }}}
 
-= PostgreSQL Installation for windows =
-As a developer, before you test the sigmah project, you have to set up your own database system. Sigmah is now based on the database system !MySql 5. But it also works with PostgreSQL 8 +. For the instructions purpose, we will use PostgreSQL 9.3.
+= Set up Sigmah database =
+As a developer, before you test the Sigmah project, you have to set up your own database system. Sigmah is now based on the database system !MySql 5. But it also works with PostgreSQL 8 +. For the instructions purpose, we will use PostgreSQL 9.3.
 
+== PostgreSQL installation ==
+=== Windows ===
 First, download [http://www.postgresql.org/download/windows/ PostgreSQL for windows]. The version includes pgAdmin III which is a useful tool to set up the DB.
-Perform the installation.
 
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/21_Install_pgSQL.png" />
 
@@ -135,6 +161,9 @@ You can keep default parameters:
   * Repository : C:\Program Files\PostgreSQL\9.3
   * Data repository : C:\Program Files\PostgreSQL\9.3\data
   * Port : 5432
+
+=== Linux ===
+...
 
 == Database creation using pgAdmin III ==
 Now you should have a PostgreSQL server and pgAdmin III installed. Open pgAdmin III.
@@ -172,8 +201,8 @@ Before running it, you will have to replace some values by your own parameters:
 || §!UserFirstName§ || Your first name ||
 || §!UserLocale§ || Must be "fr" or "en" or "es" don't include quotes (") ||
 
-== Sigmah properties ==
-Now you can tell sigmah how to connect to your database. In eclipse open the “sigmah.properties” file, and replace the hooked parameters with your own values. Here is an example of the result.
+= Sigmah properties =
+Now you can tell Sigmah how to connect to your database and email server. Open the “sigmah.properties” file, and replace the hooked parameters with your own values. Here is an example of the result.
 
 {{{
 # --
@@ -190,7 +219,7 @@ hibernate.show_sql=true
 hibernate.format_sql=true
 }}}
 
-Fill also file storage and mail server definitions.
+Fill also file storage definitions.
 
 {{{
 # --
@@ -220,7 +249,20 @@ repository.images=images
 # aws.secret_key=<aws secret key>
 }}}
 
-= Running Sigmah =
+... and mail properties. You may use [https://support.google.com/a/answer/176600?hl=en Restricted Gmail SMTP server] for tests, since it does not require authentication. See this [https://support.google.com/a/answer/176600?hl=en link] to understand its limitations.
+
+{{{
+# --
+# MAILS
+# --
+
+mail.hostname=aspmx.l.google.com
+mail.port=25
+mail.from.address=<email_address>
+mail.from.name=Sigmah Development Tests
+}}}
+
+= Run Sigmah in Development Mode =
 Before running Sigmah, make sure you have JDK 1.6 installed on your computer, and set in the Eclipse > preference > Compiler.
 To run the project, select it in the package explorer and deploy “Run > Run Configuration…”. Right click on “Maven build > new”.
 
@@ -237,17 +279,35 @@ Once the project is running, you should have a GWT development mode window open.
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/30_Run_sigmah.png" />
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/31_Run_sigmah.png" />
 
+==== Linux alert for GWT Development mode ====
+If you use Linux, at least temporarily, GWT Developer Plugin will not be supported on Google Chrome from version 35. You should therefore downgrade your Google Chrome to version 34 and avoid automatic updates.
+
+As for Mozilla Firefox, the last supported versions are FireFox 24 ESR and the non-ESR version up to version 26.
+
+See [https://groups.google.com/d/msg/google-web-toolkit/yGERgZLWjAc/M2rtUYFF29AJ this] discussion for further references.
 
 = Run Sigmah on an external server =
 == Install Tomcat7 ==
+=== Windows ===
 [https://tomcat.apache.org/download-70.cgi Get Tomcat7 here]
 Get the zip file for your OS (not the installer)
 
 `<path>`/bin/sartup.bat to start the tomcat7 server
-
 `<path>`/bin/shutdown.bat to stop the tomcat7 server
 
-== Create the Sigmah Package ==
+=== Linux ===
+You can install Tomcat7 via command line:
+
+{{{
+sudo apt-get install tomcat7
+}}}
+
+Run:
+
+sudo service tomcat7 start to start the tomcat7 server
+sudo service tomcat7 stop to stop the tomcat7 server
+
+== Create and deploy the Sigmah Package ==
 To create the war of the application, we will create a new run Configuration.
 Add goals “clean” and “gwt:package”, set the profiles as “sigmah” and check “skip tests”. Don’t forget to point out your base directory. In the JRE tab, select jdk1.6 in Runtime JRE. Apply and Run.
 
@@ -265,7 +325,7 @@ Now try to go to <http://localhost:8080/appName>. Here it would be: http://local
 
 *NB:* Before starting the server, you can give the war any name that fits you. Then, change the url a you will be able to access the app. That way you can keep a history of your built war.
 
-*Warning:* If your want to rebuilt the app with a new war, shutdown your tomcat server, delete the old war AND the old app folder, and only then you can paste the new war and start the server.
+*Warning:* If you want to rebuilt the app with a new war, shutdown your tomcat server, delete the old war AND the old app folder, and only then you can paste the new war and start the server.
 
 = Known bugs =
 == Out of memory error ==
