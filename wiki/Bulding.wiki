@@ -279,10 +279,10 @@ Once the project is running, you should have a GWT development mode window open.
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/30_Run_sigmah.png" />
 <img border="1" height="300px" src="http://sigma-h.googlecode.com/svn/wiki/install/31_Run_sigmah.png" />
 
-==== Linux alert for GWT Development mode ====
-If you use Linux, at least temporarily, GWT Developer Plugin will not be supported on Google Chrome from version 35. You should therefore downgrade your Google Chrome to version 34 and avoid automatic updates.
+==== Alert for Linux developers ====
+If you use Linux, at least temporarily, GWT Developer Plugin is not supported anymore on Google Chrome (from version 35). You should therefore downgrade your Google Chrome to version 34 and avoid automatic updates.
 
-As for Mozilla Firefox, the last supported versions are FireFox 24 ESR and the non-ESR version up to version 26.
+As for Mozilla Firefox, the last supported versions are Firefox 24 ESR and the non-ESR version up to version 26.
 
 See [https://groups.google.com/d/msg/google-web-toolkit/yGERgZLWjAc/M2rtUYFF29AJ this] discussion for further references.
 
@@ -292,8 +292,11 @@ See [https://groups.google.com/d/msg/google-web-toolkit/yGERgZLWjAc/M2rtUYFF29AJ
 [https://tomcat.apache.org/download-70.cgi Get Tomcat7 here]
 Get the zip file for your OS (not the installer)
 
-`<path>`/bin/sartup.bat to start the tomcat7 server
-`<path>`/bin/shutdown.bat to stop the tomcat7 server
+Run:
+{{{
+`<path>`/bin/sartup.bat #to start the tomcat7 server
+`<path>`/bin/shutdown.bat #to stop the tomcat7 server
+}}}
 
 === Linux ===
 You can install Tomcat7 via command line:
@@ -303,12 +306,14 @@ sudo apt-get install tomcat7
 }}}
 
 Run:
-
-sudo service tomcat7 start to start the tomcat7 server
-sudo service tomcat7 stop to stop the tomcat7 server
+{{{
+sudo service tomcat7 start #to start the tomcat7 server
+sudo service tomcat7 stop #to stop the tomcat7 server
+}}}
 
 == Create and deploy the Sigmah Package ==
 To create the war of the application, we will create a new run Configuration.
+
 Add goals “clean” and “gwt:package”, set the profiles as “sigmah” and check “skip tests”. Don’t forget to point out your base directory. In the JRE tab, select jdk1.6 in Runtime JRE. Apply and Run.
 
 <img border="1" height="400px" src="http://sigma-h.googlecode.com/svn/wiki/install/32_Ext_server.png" />
